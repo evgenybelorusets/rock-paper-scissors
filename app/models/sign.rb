@@ -30,8 +30,4 @@ class Sign
     return -1 if RULES[sign.name] == name
     0
   end
-
-  def as_json(options = {})
-    { name: name }
-  end
 end
