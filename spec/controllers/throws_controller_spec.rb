@@ -12,9 +12,9 @@ RSpec.describe ThrowsController do
       expect(subject).to render_template(:create)
     end
 
-    it 'should respond with unprocessable entity status if invalid sign is sent' do
+    it 'should redirect to if invalid sign is sent' do
       post :create, sign: 'Spock'
-      expect(response).to have_http_status(:unprocessable_entity)
+      expect(subject).to redirect_to(root_url)
     end
   end
 end

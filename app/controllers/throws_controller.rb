@@ -1,6 +1,7 @@
 class ThrowsController < ApplicationController
-  rescue_from InvalidSignError do
-    head :unprocessable_entity
+  rescue_from InvalidSignError do |exception|
+    Rails.logger.error(exception)
+    redirect_to root_url
   end
 
   def create
