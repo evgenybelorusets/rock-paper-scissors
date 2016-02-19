@@ -6,9 +6,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
-
+gem 'slim-rails'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end

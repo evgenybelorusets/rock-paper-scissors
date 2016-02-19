@@ -32,4 +32,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.eager_load_paths += Dir['app/models/signs/*.rb']
+  ActionDispatch::Reloader.to_prepare do
+    Dir['app/models/signs/*.rb'].each {|file| require_dependency file}
+  end
 end

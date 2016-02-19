@@ -9,5 +9,8 @@ Bundler.require(*Rails.groups)
 
 module RockPaperScissors
   class Application < Rails::Application
+    config.i18n.default_locale = :en
+    config.autoload_paths += %W(#{config.root}/services)
+    config.autoload_paths += %W(#{config.root}/exceptions)
   end
 end

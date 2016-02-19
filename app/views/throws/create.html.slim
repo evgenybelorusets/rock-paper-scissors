@@ -1,0 +1,7 @@
+h1
+  == t("result.#{@result.outcome}", link: link_to(t('.back'), root_path))
+.sign.well.submitted
+  = image_tag(@result.submitted_sign.name)
+
+.sign.well.generated
+  = image_tag(@result.generated_sign.name)
